@@ -8,7 +8,7 @@
 <template>
   <div id="app">
     <!-- 路由展示模块 -->
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 

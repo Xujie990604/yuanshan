@@ -14,7 +14,8 @@ module.exports = {
   // 这两条规则，每个都对应着一个Eslint的规则合集
   extends: [
     'plugin:vue/essential',
-    '@vue/standard'
+    '@vue/standard',
+    'plugin:vue/recommended'
   ],
   parserOptions: {
     parser: '@babel/eslint-parser' // 指定哪个插件作为Eslint的解析器

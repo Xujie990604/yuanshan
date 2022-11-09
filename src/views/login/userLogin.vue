@@ -8,15 +8,15 @@
 <template>
   <div class="user-login">
     <!-- 用户的登录表单 -->
-    <login-form></login-form>
+    <login-form />
   </div>
 </template>
 
 <script>
-import loginForm from './loginForm.vue'
+import loginForm from './loginComponent/loginForm.vue'
 export default {
-  components: { loginForm },
-  name: 'userLogin'
+  name: 'UserLogin',
+  components: { loginForm }
 }
 </script>
 
