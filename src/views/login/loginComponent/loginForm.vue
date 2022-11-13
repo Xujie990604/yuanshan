@@ -60,16 +60,6 @@
 </template>
 
 <script>
-const passwordValidator = (rule, value, callback) => {
-  console.log(rule)
-  if (!value) {
-    callback(new Error('这是必选项'))
-  }
-  if (value.length < 10) {
-    callback(new Error('密码长度不够'))
-  }
-  callback()
-}
 export default {
   name: 'LoginForm',
   data () {
@@ -79,20 +69,16 @@ export default {
         username: '', // 用户名
         password: '' // 密码
       },
-      rules: {
-        username: [
-          {
-            required: true,
-            message: '这是必填项',
-            trigger: 'blur'
-          }
-        ],
-        password: [
-          {
-            validator: passwordValidator,
-            trigger: 'blur'
-          }
-        ]
+      rules: { // 表单元素的验证规则
+        // 用户名的验证规则
+        username: this.validator({
+          required: true
+        }),
+        // 密码的验证规则
+        password: this.validator({
+          required: true,
+          lengthRange: true
+        })
       }
     }
   },

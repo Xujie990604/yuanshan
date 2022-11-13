@@ -12,8 +12,12 @@ import store from './store'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import validator from './common/formValidator'
 
 Vue.use(ElementUI)
+
+// 将表单验证的规则添加到原型上
+Vue.prototype.validator = validator
 
 Vue.config.productionTip = false
 
