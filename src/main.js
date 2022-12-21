@@ -13,11 +13,19 @@ import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import validator from './common/formValidator'
+import axios from 'axios'
+
+// 在开发模式下才会加载 mock 文件
+if (process.env.NODE_ENV === 'development') {
+  require('./mock/index.js')
+}
 
 Vue.use(ElementUI)
 
 // 将表单验证的规则添加到原型上
 Vue.prototype.validator = validator
+// 将 axios 挂载到原型上
+Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
 

@@ -6,7 +6,9 @@
  * @Description:
 -->
 <template>
-  <div class="user-home" />
+  <div class="user-home">
+    home页面
+  </div>
 </template>
 
 <script>
@@ -15,6 +17,22 @@ export default {
   data () {
     return {
     }
+  },
+  created () {
+    this.$axios
+      .post(
+        '/api/posts',
+        {
+          title: 'xujie',
+          body: 'baby',
+          userId: 1
+        },
+        {
+          timeout: 50000
+        })
+      .then(res => {
+        console.log(res)
+      })
   }
 }
 </script>
