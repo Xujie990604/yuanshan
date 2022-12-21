@@ -1,22 +1,19 @@
+<!--
+ * @Author: x09898 coder_xujie@163.com
+ * @Date: 2022-12-21 16:55:43
+ * @LastEditors: x09898 coder_xujie@163.com
+ * @FilePath: \yuanshan\src\views\Home\userHome.vue
+ * @Description:
+-->
 <template>
-  <div class="user-home">
-    <el-upload
-        action="https://jsonplaceholder.typicode.com/posts/"
-        :on-success="handleChange"
-        :file-list="fileList"
-        class="el-upload"
-      >
-    </el-upload>
-  </div>
+  <div class="user-home" />
 </template>
 
 <script>
-import { read, utils } from 'xlsx'
 export default {
   name: 'UserHome',
   data () {
     return {
-
     }
   }
 }
